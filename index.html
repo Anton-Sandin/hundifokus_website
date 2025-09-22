@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hund.Ifokus - Hundtränare</title>
+  <meta name="description" content="Hundträning med värme och kunskap. Artiklar, videos, kurser och personlig coaching.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --warm-1: #ffedd5;   /* varm ljus bakgrund */
+    --warm-2: #fed7aa;   /* accent ljus */
+    --warm-3: #fb923c;   /* primär orange */
+    --warm-4: #1f2937;   /* mörk text */
+    --warm-5: #fef3c7;   /* mjuk gul */
+  }
+
+  body {
+    font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    color: var(--warm-4);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  p, li, a, label, input, textarea {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+  }
+
+  .btn, .nav-link {
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .btn-primary {
+    background: var(--warm-3);
+    border-color: var(--warm-3);
+  }
+
+  .btn-primary:hover {
+    background: #ea7b1f;
+    border-color: #ea7b1f;
+  }
+
+  .badge-warm {
+    background: var(--warm-2);
+    color: #7c2d12;
+    font-weight: 600;
+  }
+
+  .section-pad {
+    padding: 72px 0;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: var(--warm-4);
+    background: linear-gradient(0deg, rgba(255,237,213,.8), rgba(255,237,213,.8)), url('https://i.imgur.com/ByboIJ7.jpeg') center/cover no-repeat;
+  }
+
+  .hero h1 {
+    font-weight: 800;
+  }
+
+  .nav-link {
+    font-weight: 600;
+  }
+
+  .brand-paw {
+    color: var(--warm-3);
+  }
+
+  .card {
+    border: 0;
+    box-shadow: 0 8px 22px rgba(31,41,55,.08);
+  }
+
+  .icon-blob {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--warm-5);
+    border-radius: 14px;
+    color: #b45309;
+    font-size: 24px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+    border-left: 3px solid var(--warm-2);
+  }
+
+  .timeline .item {
+    margin-bottom: 20px;
+  }
+
+  .dog-card img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .bg-warm {
+    background: var(--warm-1);
+  }
+
+  .newsletter {
+    background: linear-gradient(180deg, var(--warm-5), #fff);
+  }
+
+  .footer {
+    background: #111827;
+    color: #e5e7eb;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .footer a {
+    color: #fde68a;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .sticky-cta {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1080;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-shield-fill-check brand-paw"></i> Hund I Fokus
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
+          <li class="nav-item"><a class="nav-link" href="#om">Om mig</a></li>
+		  <li class="nav-item"><a class="nav-link" href="#hundar">Mina hundar</a></li>
+		  <li class="nav-item"><a class="nav-link" href="#kunskap">Tips & Råd</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cert">Certifikat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- HERO -->
+<header id="start" class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7">
+        <span class="badge badge-warm mb-3">Hundträning med hjärta & nyfikenhet</span>
+        <h1 class="display-5 mb-3">Jag utforskar samspelet mellan människa och hund – med respekt, lek och lyhördhet.</h1>
+        <p class="lead mb-4">Här delar jag tankar, metoder och vardagsreflektioner från livet med hund. Ibland tränar jag, ibland observerar jag – alltid med nyfikenhet.</p>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="#om" class="btn btn-outline-dark btn-lg"><i class="bi bi-person-lines-fill"></i> Om mig</a>
+          <a href="https://www.tiktok.com/@hund.ifokus" target="_blank" class="btn btn-dark btn-lg">
+            <i class="bi bi-tiktok"></i> TikTok-klipp
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <div class="card p-3">
+          <img src="https://i.imgur.com/z0vy7Ci.png"
+               class="rounded" alt="Hundträning i arbete">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+ <!-- OM MIG -->
+<section id="om" class="section-pad bg-warm">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Om mig</h2>
+        <p>Jag heter Cassandra Hokkanen och bor i Skåne med ett hjärta som klappar för hundar, relationer och kommunikation.</p>
+        <p>Min vardag består av promenader, träning, funderingar och ibland bara att sitta tyst bredvid en hund. Jag tror på att bygga tillit genom små steg, att förstå innan man försöker förändra, och att träning ska kännas meningsfull för båda parter.</p>
+        <ul class="list-unstyled mt-3">
+          <li class="d-flex align-items-start gap-3 mb-2">
+            <span class="icon-blob"><i class="bi bi-heart-fill"></i></span>
+            <div><strong>Metod:</strong> Belöningsbaserat, relationsfokuserat, med mycket tålamod.</div>
+          </li>
+          <li class="d-flex align-items-start gap-3 mb-2">
+            <span class="icon-blob"><i class="bi bi-bookmark-heart-fill"></i></span>
+            <div><strong>Intressen:</strong> Etologi, vardagsbeteenden, stress och trygghet.</div>
+          </li>
+          <li class="d-flex align-items-start gap-3 mb-2">
+            <span class="icon-blob"><i class="bi bi-camera-video-fill"></i></span>
+            <div><strong>Delar:</strong> Små insikter, övningar och vardagsklipp på TikTok.</div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6"><img class="w-100 rounded" src="https://i.imgur.com/oIjoKGn.png" alt="Hundpromenad" style="max-height: 200px; object-fit: cover;"></div>
+          <div class="col-6"><img class="w-100 rounded" src="https://i.imgur.com/5eXBlwH.png" alt="Hundträning belöning" style="max-height: 200px; object-fit: cover;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- MINA HUNDAR -->
+  <section id="hundar" class="section-pad">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Mina hundar</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card dog-card h-100">
+            <img src="https://i.imgur.com/xESRTsM.png" class="card-img-top" alt="Porträtt av hund">
+            <div class="card-body">
+              <h5>Sunny</h5>
+              <p class="text-muted">Född 2022. Älskar allt och alla! Min första "egna hund". Lärde mig nya trix, öppenhet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card dog-card h-100">
+            <img src="https://i.imgur.com/tBZvFn5.png" class="card-img-top" alt="Hund i träning">
+            <div class="card-body">
+              <h5>Ebba</h5>
+              <p class="text-muted">Född 2023. Lärde mig vikten av struktur, snälla metoder och tålamod.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KUNSKAP / BLOGG -->
+  <section id="kunskap" class="section-pad bg-warm">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Mina tips & råd</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body">
+              <div class="mb-2">
+                <span class="badge badge-warm">Valpträning</span>
+              </div>
+              <h5>3 enkla rutiner för en trygg valp</h5>
+              <p class="text-muted">Sömn, tydliga pauser och lekfull träning – så skapar du en balans från dag ett.</p>
+              <a href="#" class="stretched-link">Läs mer</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body">
+              <div class="mb-2">
+                <span class="badge badge-warm">Problembeteenden</span>
+              </div>
+              <h5>Koppelutfall: förstå orsakerna</h5>
+              <p class="text-muted">Triggerstackning, avstånd och alternativa beteenden – en tydlig plan steg för steg.</p>
+              <a href="#" class="stretched-link">Läs mer</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body">
+              <div class="mb-2">
+                <span class="badge badge-warm">Vardagslydnad</span>
+              </div>
+              <h5>Inkallning som verkligen fungerar</h5>
+              <p class="text-muted">Belöningsbank, störningsstegring och kedjor – så får du en säker inkallning.</p>
+              <a href="#" class="stretched-link">Läs mer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- VIDEO SCROLLER -->
+<section id="video" class="section-pad bg-light">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <h2 class="fw-bold mb-0">Video & media</h2>
+      <a href="https://www.tiktok.com/@hund.ifokus" target="_blank" class="btn btn-dark">
+        <i class="bi bi-tiktok"></i> Följ oss på TikTok
+      </a>
+    </div>
+
+    <div class="overflow-auto pb-2">
+      <div class="d-flex flex-nowrap gap-4">
+        <!-- Video 1 -->
+        <div class="card border-0" style="min-width: 320px; max-width: 320px;">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hund.ifokus/video/7511408145839820054" data-video-id="7511408145839820054" style="max-width:320px; min-width:320px;">
+            <section>
+              <a target="_blank" title="@hund.ifokus" href="https://www.tiktok.com/@hund.ifokus?refer=embed">@hund.ifokus</a>
+              <p>Gör inte det möjliga, omöjligt!💪🏻</p>
+              <a target="_blank" title="♬ Anxiety - Doechii" href="https://www.tiktok.com/music/Anxiety-7471355364306668310?refer=embed">♬ Anxiety - Doechii</a>
+            </section>
+          </blockquote>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="card border-0" style="min-width: 320px; max-width: 320px;">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hund.ifokus/video/7549515411482742018" data-video-id="7549515411482742018" style="max-width:320px; min-width:320px;">
+            <section>
+              <a target="_blank" title="@hund.ifokus" href="https://www.tiktok.com/@hund.ifokus?refer=embed">@hund.ifokus</a>
+              <p>Tips för hundmöten i vardagen</p>
+              <a target="_blank" title="♬ Calm Vibes" href="#">♬ Calm Vibes</a>
+            </section>
+          </blockquote>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="card border-0" style="min-width: 320px; max-width: 320px;">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hund.ifokus/video/7551458152567377174" data-video-id="7551458152567377174" style="max-width:320px; min-width:320px;">
+            <section>
+              <a target="_blank" title="@hund.ifokus" href="https://www.tiktok.com/@hund.ifokus?refer=embed">@hund.ifokus</a>
+              <p>Belöningstekniker som fungerar</p>
+              <a target="_blank" title="♬ Happy Dog" href="#">♬ Happy Dog</a>
+            </section>
+          </blockquote>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="card border-0" style="min-width: 320px; max-width: 320px;">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hund.ifokus/video/7525535582286548246" data-video-id="7525535582286548246" style="max-width:320px; min-width:320px;">
+            <section>
+              <a target="_blank" title="@hund.ifokus" href="https://www.tiktok.com/@hund.ifokus?refer=embed">@hund.ifokus</a>
+              <p>Valpträning steg för steg</p>
+              <a target="_blank" title="♬ Puppy Love" href="#">♬ Puppy Love</a>
+            </section>
+          </blockquote>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="card border-0" style="min-width: 320px; max-width: 320px;">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hund.ifokus/video/7491398311656639766" data-video-id="7491398311656639766" style="max-width:320px; min-width:320px;">
+            <section>
+              <a target="_blank" title="@hund.ifokus" href="https://www.tiktok.com/@hund.ifokus?refer=embed">@hund.ifokus</a>
+              <p>Frågor & svar med Tassebo</p>
+              <a target="_blank" title="♬ Chill Talk" href="#">♬ Chill Talk</a>
+            </section>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+</section>
+
+
+<!-- HJÄLP & RÅD -->
+<section id="hjalp" class="section-pad bg-warm">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Hjälp & Råd</h2>
+    <p class="mb-4">Här hittar du guider, tips och möjlighet att ställa frågor om din hund. Allt är gratis att läsa – och du är varmt välkommen att skriva till mig direkt om du behöver hjälp eller råd.</p>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>Ställ en fråga via DM</h5>
+            <p class="text-muted">Du kan skriva till mig direkt på TikTok eller Instagram om du har frågor om din hunds beteende, träning eller vardag. Jag svarar så snart jag kan.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="https://www.tiktok.com/@hund.ifokus" target="_blank" class="btn btn-dark">
+                <i class="bi bi-tiktok"></i> TikTok DM
+              </a>
+              <a href="https://www.instagram.com/hund.ifokus" target="_blank" class="btn btn-outline-dark">
+                <i class="bi bi-instagram"></i> Instagram DM
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>Rådgivning via Patreon (kommer snart)</h5>
+            <p class="text-muted">Inom kort kommer du kunna boka personlig rådgivning via Patreon – med exklusiva videos, Q&A och möjlighet till direktkontakt.</p>
+            <a href="https://www.patreon.com/hundifokus" target="_blank" class="btn btn-warning d-inline-flex align-items-center gap-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Patreon_logo.svg" alt="Patreon" style="height: 20px;">
+              Gå till Patreon
+            </a>
+            <p class="small text-muted mt-2">Följ gärna redan nu för att få uppdateringar när bokning öppnar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CERTIFIKAT & UTBILDNING -->
+<section id="cert" class="section-pad bg-white">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <h2 class="fw-bold mb-0">Certifikat & utbildning</h2>
+      <!-- Optional: Link to full CV or diplomas -->
+      <a href="#kontakt" class="btn btn-outline-dark">
+        <i class="bi bi-file-earmark-text"></i> Visa mer
+      </a>
+    </div>
+
+    <div class="row g-4">
+      <!-- Left column: cards for each certificate -->
+      <div class="col-lg-6">
+        <div class="d-flex flex-column gap-4">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="mb-1">Certifierad Hundinstruktör.</h6>
+              <small class="text-muted">2025</small>
+              <p class="mt-2 mb-0">Fokus på belöningsbaserad träning och etik.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6 class="mb-1">Certifierad Hundtränare.</h6>
+              <small class="text-muted">2024</small>
+              <p class="mt-2 mb-0">Problembeteenden, stress, rädsla och anpassade träningsplaner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: background card -->
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>Kort om min bakgrund</h5>
+            <p>Jag började träna hundar som tonåring och fastnade direkt för samspelet mellan människa och hund. Min drivkraft är att skapa välmående hundar och trygga människor – tillsammans.</p>
+            <ul class="mb-0">
+              <li>Coachar hundägare över hela Sverige.</li>
+              <li>Tränat hund sedan 2009.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TACK & VÄLKOMMEN -->
+<section id="kontakt" class="section-pad bg-warm">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Tack för att du är här 💛</h2>
+        <p class="fs-5">Jag vill bara säga – tack. Tack för att du läser, följer, delar, kommenterar och bryr dig om hundar lika mycket som jag gör. Det betyder världen för mig att du är här.</p>
+        <p class="mb-4">Jag älskar alla hundar, stora som små, och jag hjälper gärna till med tips, råd eller bara ett vänligt ord. Du är alltid välkommen att skriva till mig – oavsett om du har en fråga, vill dela något fint, eller bara säga hej.</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-tiktok"></i> <a href="https://www.tiktok.com/@hund.ifokus" target="_blank">@hund.ifokus på TikTok</a></li>
+          <li class="mb-2"><i class="bi bi-instagram"></i> <a href="https://www.instagram.com/hund.ifokus" target="_blank">@hund.ifokus på Instagram</a></li>
+        </ul>
+        <p class="mt-4 fw-bold">Ni är bäst. Verkligen. Tack för att ni finns 🐾</p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="https://i.imgur.com/BZuEX3X.png" alt="Söt hund som står" class="img-fluid rounded shadow" style="max-height: 500px; object-fit: cover;">
+        <p class="small text-muted mt-2">En av mina favoriter – så mycket kärlek i en blick.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- NEWSLETTER BANNER -->
+  <section class="newsletter py-5">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-lg-6">
+          <h4 class="fw-bold mb-1">Gå med i min e-postlista</h4>
+          <p class="mb-0">Tips, videos och erbjudanden – utan spam.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="row g-2">
+            <div class="col-12 col-md-8">
+              <input type="email" class="form-control form-control-lg" placeholder="Din e-post">
+            </div>
+            <div class="col-12 col-md-4 d-grid">
+              <button class="btn btn-primary btn-lg" type="button">Prenumerera</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-4">
+          <h5 class="mb-3"><i class="bi bi-shield-fill-check brand-paw"></i>Hund I Fokus</h5>
+          <p class="mb-2">Varm, tydlig och modern hundträning.</p>
+          <div class="d-flex gap-3">
+            <!-- KOMMENTAR: Lägg riktiga länkar -->
+            <a href="https://www.tiktok.com/@dittkonto" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok fs-4"></i></a>
+            <a href="https://www.instagram.com/dittkonto" target="_blank" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="https://www.youtube.com/@dittkonto" target="_blank" aria-label="YouTube"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h6 class="mb-3">Snabblänkar</h6>
+          <ul class="list-unstyled">
+		    <li><a href="#hundar">Mina hundar</a></li>
+            <li><a href="#kunskap">Mina Tips & Råd</a></li>
+            <li><a href="#cert">Certifikat</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h6 class="mb-3">På gång</h6>
+          <p class="mb-2">Medlemskap/Patreon med exklusiva kurser och Q&A.</p>
+          <p class="mb-0">Webbshop i samarbete med Nordicpup Handelsbolag.</p>
+        </div>
+      </div>
+      <hr class="border-secondary-subtle my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <small>© <span id="year"></span>Cassandra Hundtränare - Hund I Fokus. Alla rättigheter förbehålls.</small>
+        <small>Byggd med Bootstrap.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta">
+    <a href="#hjalp" class="btn btn-primary btn-lg shadow-lg"><i class="bi bi-chat-left-text"></i> Boka/Fråga</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sätter aktuellt år i footern
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Tillgänglig förbättring: fokusringar på keyboard-nav
+    document.body.addEventListener('keyup', function(e){
+      if(e.key === 'Tab'){ document.body.classList.add('user-tabbing'); }
+    });
+  </script>
+</body>
+</html>
