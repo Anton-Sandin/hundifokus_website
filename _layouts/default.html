@@ -72,7 +72,6 @@
 
     .dog-card img { aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; }
     .bg-warm { background: var(--warm-1); }
-    .newsletter { background: linear-gradient(180deg, var(--warm-5), #fff); border-radius: 12px; padding: 2rem; }
 
     .footer { background: #111827; color: #e5e7eb; font-family: 'Nunito', sans-serif; }
     .footer a { color: #fde68a; text-decoration: none; }
@@ -111,52 +110,6 @@
       border-radius: 8px;
       margin: 1.5rem 0;
     }
-
-    /* Mailchimp / form styling to match the site */
-    .mc-form .form-control {
-      background: #fff;
-      border: 2px solid var(--warm-2);
-      color: var(--warm-4);
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      height: auto;
-    }
-
-    .mc-form .form-control:focus {
-      border-color: var(--warm-3);
-      box-shadow: 0 0 0 6px rgba(251,146,60,0.08);
-      outline: none;
-    }
-
-    .mc-form .btn {
-      background: var(--warm-3);
-      border-color: var(--warm-3);
-      color: #fff;
-      font-weight: 700;
-      border-radius: 8px;
-      padding: 0.75rem 1.25rem;
-    }
-
-    .mc-form .btn:hover {
-      background: #ea7b1f;
-      border-color: #ea7b1f;
-    }
-
-    .mc-success {
-      background: #fef3c7;
-      border: 1px solid var(--warm-2);
-      padding: 1rem;
-      border-radius: 8px;
-      color: var(--warm-4);
-    }
-
-    .mc-error {
-      background: #ffe5d1;
-      border: 1px solid #f5c2a0;
-      padding: 1rem;
-      border-radius: 8px;
-      color: #7c2d12;
-    }
   </style>
 </head>
 <body>
@@ -186,7 +139,7 @@
   <!-- Page/Post Content -->
   {{ content }}
 
-  <!-- FOOTER -->
+  <!-- FOOTER (no footer subscription block) -->
   <footer class="footer pt-5 pb-4">
     <div class="container">
       <div class="row gy-4">
@@ -224,7 +177,7 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Mailchimp Connected Site script (you provided) -->
+  <!-- Mailchimp Connected Site script (kept for popup) -->
   <script id="mcjs">
     !function(c,h,i,m,p){
       m=c.createElement(h),p=c.getElementsByTagName(h)[0],
@@ -232,22 +185,12 @@
     }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8cb85b2ad5e7ecd168e857bce/36eb5fbb9348c8b45df0ecd14.js");
   </script>
 
-  <!-- Optional: inline script to show Mailchimp responses in-page (if Mailchimp supports JSONP or redirect responses) -->
+  <!-- Optional: small helper to remove any leftover inline Mailchimp embed DOM nodes if present -->
   <script>
-    // Simple UI helper: show/hide mce response containers after form submit.
-    // Mailchimp's embedded form normally handles responses; this keeps placeholders ready.
+    // If you previously had an embedded form node, remove it to avoid duplicates.
     (function(){
-      var form = document.getElementById('mc-embedded-subscribe-form');
-      var success = document.getElementById('mce-success-response');
-      var error = document.getElementById('mce-error-response');
-
-      if (!form) return;
-
-      form.addEventListener('submit', function(){
-        // Show a small waiting message
-        success.style.display = 'none';
-        error.style.display = 'none';
-      });
+      var maybeEmbed = document.querySelector('.mc-form, #mc-embedded-subscribe-form, #mc_embed_signup');
+      if (maybeEmbed) maybeEmbed.remove();
     })();
   </script>
 </body>
