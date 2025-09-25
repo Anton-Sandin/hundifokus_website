@@ -264,50 +264,33 @@
     </div>
   </section>
 
-  <!-- KUNSKAP / BLOGG -->
-  <section id="kunskap" class="section-pad bg-warm">
-    <div class="container">
-      <h2 class="fw-bold mb-4">Mina tips & råd</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body">
-              <div class="mb-2">
-                <span class="badge badge-warm">Valpträning</span>
-              </div>
-              <h5>3 enkla rutiner för en trygg valp</h5>
-              <p class="text-muted">Sömn, tydliga pauser och lekfull träning – så skapar du en balans från dag ett.</p>
-              <a href="#" class="stretched-link">Läs mer</a>
+<!-- KUNSKAP / BLOGG -->
+<section id="kunskap" class="section-pad bg-warm">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Mina tips & råd</h2>
+    <div class="row g-4">
+      
+      {% for post in site.posts %}
+      <div class="col-md-6 col-lg-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <div class="mb-2">
+              {% if post.category %}
+                <span class="badge badge-warm">{{ post.category }}</span>
+              {% endif %}
             </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body">
-              <div class="mb-2">
-                <span class="badge badge-warm">Problembeteenden</span>
-              </div>
-              <h5>Koppelutfall: förstå orsakerna</h5>
-              <p class="text-muted">Triggerstackning, avstånd och alternativa beteenden – en tydlig plan steg för steg.</p>
-              <a href="#" class="stretched-link">Läs mer</a>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body">
-              <div class="mb-2">
-                <span class="badge badge-warm">Vardagslydnad</span>
-              </div>
-              <h5>Inkallning som verkligen fungerar</h5>
-              <p class="text-muted">Belöningsbank, störningsstegring och kedjor – så får du en säker inkallning.</p>
-              <a href="#" class="stretched-link">Läs mer</a>
-            </div>
-          </article>
-        </div>
+            <h5>{{ post.title }}</h5>
+            <p class="text-muted">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <a href="{{ post.url }}" class="stretched-link">Läs mer</a>
+          </div>
+        </article>
       </div>
+      {% endfor %}
+      
     </div>
-  </section>
+  </div>
+</section>
+
 
 <!-- VIDEO SCROLLER -->
 <section id="video" class="section-pad bg-light">
@@ -572,3 +555,4 @@
   </script>
 </body>
 </html>
+
