@@ -270,22 +270,23 @@
     <h2 class="fw-bold mb-4">Mina tips & råd</h2>
     <div class="row g-4">
       
-      {% for post in site.posts %}
-      <div class="col-md-6 col-lg-4">
-        <article class="card h-100">
-          <div class="card-body">
-            <div class="mb-2">
-              {% if post.category %}
-                <span class="badge badge-warm">{{ post.category }}</span>
-              {% endif %}
-            </div>
-            <h5>{{ post.title }}</h5>
-            <p class="text-muted">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            <a href="{{ post.url }}" class="stretched-link">Läs mer</a>
-          </div>
-        </article>
+{% for post in site.posts %}
+  <div class="col-md-6 col-lg-4">
+    <article class="card h-100">
+      <div class="card-body">
+        <div class="mb-2">
+          {% if post.category %}
+            <span class="badge badge-warm">{{ post.category }}</span>
+          {% endif %}
+        </div>
+        <h5>{{ post.title }}</h5>
+        <p class="text-muted">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="stretched-link">Läs mer</a>
       </div>
-      {% endfor %}
+    </article>
+  </div>
+{% endfor %}
+
       
     </div>
   </div>
@@ -555,4 +556,5 @@
   </script>
 </body>
 </html>
+
 
