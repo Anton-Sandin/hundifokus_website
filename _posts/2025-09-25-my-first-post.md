@@ -2,7 +2,7 @@
 layout: post
 title: "Valpträning: en varm och enkel nybörjarguide"
 date: 2025-09-25
-category: Valpträning
+category: Valpträning, Test
 tags: [valp, träning, vardag, belöning]
 cover: "https://hundinfo.se/wp-content/uploads/2024/09/hundinfose-basta-tipsen-for-valptraning-gor-din-valp-till-en-stjarna-image.jpg.webp"
 excerpt: "En praktisk och vänlig steg-för-steg-guide för dig och din nya valp — från trygg start till enkla vardagsövningar."
