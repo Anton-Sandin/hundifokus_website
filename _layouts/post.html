@@ -10,7 +10,12 @@ layout: default
       <span class="badge badge-warm">{{ page.category }}</span>
     {% endif %}
   </header>
+
   <div class="post-content">
     {{ content }}
   </div>
+
+  <hr class="my-5">
+
+  <a href="{{ '/' | relative_url }}" class="btn btn-primary">← Tillbaka</a>
 </article>
