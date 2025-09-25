@@ -1,3 +1,5 @@
 title: Hundifokus
 description: En blogg om hundträning
 theme: minima   # you can change this later
+url: "https://anton-sandin.github.io"
+baseurl: "/hundifokus_website"
