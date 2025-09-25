@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <style>
+  :root {
+    --warm-1: #ffedd5;   /* varm ljus bakgrund */
+    --warm-2: #fed7aa;   /* accent ljus */
+    --warm-3: #fb923c;   /* primär orange */
+    --warm-4: #1f2937;   /* mörk text */
+    --warm-5: #fef3c7;   /* mjuk gul */
+  }
+
+  body {
+    font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    color: var(--warm-4);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  p, li, a, label, input, textarea {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+  }
+
+  .btn, .nav-link {
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .btn-primary {
+    background: var(--warm-3);
+    border-color: var(--warm-3);
+  }
+
+  .btn-primary:hover {
+    background: #ea7b1f;
+    border-color: #ea7b1f;
+  }
+
+  .badge-warm {
+    background: var(--warm-2);
+    color: #7c2d12;
+    font-weight: 600;
+  }
+
+  .section-pad {
+    padding: 72px 0;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: var(--warm-4);
+    background: linear-gradient(0deg, rgba(255,237,213,.8), rgba(255,237,213,.8)), url('https://i.imgur.com/ByboIJ7.jpeg') center/cover no-repeat;
+  }
+
+  .hero h1 {
+    font-weight: 800;
+  }
+
+  .nav-link {
+    font-weight: 600;
+  }
+
+  .brand-paw {
+    color: var(--warm-3);
+  }
+
+  .card {
+    border: 0;
+    box-shadow: 0 8px 22px rgba(31,41,55,.08);
+  }
+
+  .icon-blob {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--warm-5);
+    border-radius: 14px;
+    color: #b45309;
+    font-size: 24px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+    border-left: 3px solid var(--warm-2);
+  }
+
+  .timeline .item {
+    margin-bottom: 20px;
+  }
+
+  .dog-card img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .bg-warm {
+    background: var(--warm-1);
+  }
+
+  .newsletter {
+    background: linear-gradient(180deg, var(--warm-5), #fff);
+  }
+
+  .footer {
+    background: #111827;
+    color: #e5e7eb;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .footer a {
+    color: #fde68a;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .sticky-cta {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1080;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+  <meta charset="utf-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html }}">
+  <link href="/hundifokus_website/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/hundifokus_website/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-shield-fill-check brand-paw"></i> Hund I Fokus
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
+          <li class="nav-item"><a class="nav-link" href="#om">Om mig</a></li>
+		  <li class="nav-item"><a class="nav-link" href="#hundar">Mina hundar</a></li>
+		  <li class="nav-item"><a class="nav-link" href="#kunskap">Tips & Råd</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cert">Certifikat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+  {{ content }}
+  
+  <!-- FOOTER -->
+  <footer class="footer pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-4">
+          <h5 class="mb-3"><i class="bi bi-shield-fill-check brand-paw"></i>Hund I Fokus</h5>
+          <p class="mb-2">Varm, tydlig och modern hundträning.</p>
+          <div class="d-flex gap-3">
+            <!-- KOMMENTAR: Lägg riktiga länkar -->
+            <a href="https://www.tiktok.com/@dittkonto" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok fs-4"></i></a>
+            <a href="https://www.instagram.com/dittkonto" target="_blank" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="https://www.youtube.com/@dittkonto" target="_blank" aria-label="YouTube"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h6 class="mb-3">Snabblänkar</h6>
+          <ul class="list-unstyled">
+		    <li><a href="#hundar">Mina hundar</a></li>
+            <li><a href="#kunskap">Mina Tips & Råd</a></li>
+            <li><a href="#cert">Certifikat</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h6 class="mb-3">På gång</h6>
+          <p class="mb-2">Medlemskap/Patreon med exklusiva kurser och Q&A.</p>
+          <p class="mb-0">Webbshop i samarbete med Nordicpup Handelsbolag.</p>
+        </div>
+      </div>
+      <hr class="border-secondary-subtle my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <small>© <span id="year"></span>Cassandra Hundtränare - Hund I Fokus. Alla rättigheter förbehålls.</small>
+        <small>Byggd med Bootstrap.</small>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
