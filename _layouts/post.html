@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="container section-pad">
+  <header class="mb-4">
+    <h1 class="fw-bold">{{ page.title }}</h1>
+    <p class="text-muted">{{ page.date | date: "%Y-%m-%d" }}</p>
+    {% if page.category %}
+      <span class="badge badge-warm">{{ page.category }}</span>
+    {% endif %}
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
